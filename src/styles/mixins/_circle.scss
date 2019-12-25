@@ -1,0 +1,31 @@
+/// Делает элемент круглым. Ширина и высота у элемента одинаковые, по умолчанию радиус скругления равен половине размера, но этот параметр можно изменить.
+/// 
+/// @group utilities
+/// 
+/// @param {Length} $size - `width` и `height` элемента.
+/// @param {Length} $radius [$size/2] - `border-radius` элемента, по умолчанию - половина размера, можно задать любой радиус в единицах измерения длины.
+/// 
+/// @example scss - Использование
+/// .element {
+/// 		@include circle(10rem);
+/// }
+/// .other-element {
+/// 		@include circle(80%, 50%);
+/// }
+/// 
+/// @example css - Вывод CSS
+/// .element {
+/// 		width: 10rem;
+/// 		height: 10rem;
+/// 		border-radius: 5rem;
+/// }
+/// .other-element {
+/// 		width: 80%;
+/// 		height: 80%;
+/// 		border-radius: 50%;
+/// }
+@mixin circle($size, $radius: $size/2){
+	@include size($size);
+	border-radius: $radius;
+	overflow: hidden;
+}

@@ -1,0 +1,127 @@
+.header {
+  @include fixed(top 0px left 0px);
+  width: 100%;
+  background: transparent;
+  background: $color--base;
+  color: $color--light-grey;
+  font-family: $font--util;
+  border-bottom: 1px solid $color--grey;
+  z-index: $z-index--header;
+  transition: background 0.3s;
+
+  & + .page {
+    padding-top: 140px;
+
+    @media #{$md} {
+      padding-top: 106px;
+    }
+    @media #{$sm} {
+      padding-top: 68px;
+    }
+  }
+
+  .layout--home & {
+    background: transparent;
+
+    &.scrolled {
+      background: $color--base;
+    }
+
+    & + .page {
+      padding-top: 0;
+    }
+  }
+  
+  &__content {
+    @include flexy(space-between, center);
+    padding: 32px 0;
+
+    @media #{$sm} {
+      padding: 18px 0;
+    }
+  }
+  &__left {
+    @include flexy(flex-start, center);
+  }
+  &__right {
+    @include flexy(flex-end, center);
+  }
+
+  &__burger {
+    margin-right: 20px;
+  }
+
+  &__logo {
+    @include size(190px, 30px);
+    margin-right: 1.25rem;
+
+    @media #{$md} {
+      @include size(160px, 25px);
+    }
+    @media #{$sm} {
+      @include size(140px, 22px);
+    }
+
+    .icon {
+      display: block;
+      @include size(100%);
+    }
+  }
+  &__slogan {
+    max-width: 14em;
+    margin-top: 2px;
+  }
+
+  &__contacts {
+    @include flexy(flex-end, center);
+  }
+  &__phones {
+    @include flexy(flex-end, center);
+    margin-right: 2px;
+    margin-top: 4px;
+
+    @media #{$md} {
+      margin-top: 6px;
+      margin-right: 0;
+    }
+
+    .header-contact + .header-contact {
+      margin-left: 28px;
+
+      @media #{$md} {
+        margin-left: 20px;
+      }
+    }
+  }
+  &__call-btn {
+    margin: 0 30px;
+
+    @media #{$xs} {
+      margin: 0;
+    }
+
+    .btn--square + .btn--square {
+      margin-left: 25px;
+    }
+  }
+}
+
+.header-contact {
+  &__title {
+    font: $font-size--xsmall $font--util;
+    line-height: 1.167;
+  }
+  &__text,
+  &__link {
+    font: bold 18px $font--accent;
+    line-height: 1.28;
+
+    @media #{$md} {
+      font-size: 16px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $color--light-grey;
+  }
+}

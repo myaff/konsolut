@@ -1,0 +1,116 @@
+p {
+  margin: 2rem 0;
+  @include null-first-last-margin();
+}
+
+[class*="tp-heading"] {
+  font-family: $font--accent;
+}
+.tp-heading {
+  &--large {
+    @include heading {
+      font-size: $font-size--large;
+      font-weight: 500;
+      line-height: 1.167;
+
+      @media #{$sm} {
+        font-size: 30px;
+      }
+    }
+  }
+  &--big {
+    @include heading {
+      font-size: $font-size--big;
+      line-height: 1.167;
+      font-weight: 500;
+
+      @media #{$sm} {
+        font-size: 22px;
+      }
+    }
+  }
+  &--medium {
+    @include heading {
+      font-size: $font-size--medium;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+  }
+  &--small {
+    @include heading {
+      font-size: $font-size--base;
+      
+    }
+  }
+}
+
+.tp-body {
+  &--big {
+    font-size: $font-size--medium;
+    line-height: 1.25;
+    @media #{$sm} {
+      font-size: 16px;
+    }
+  }
+  &--base {
+    font-size: $font-size--base;
+    line-height: 1.2;
+  }
+  &--small {
+    font-size: $font-size--small;
+    @media #{$md} {
+      font-size: 12px;
+    }
+  }
+  &--xsmall {
+    font-size: $font-size--xsmall;
+  }
+  
+}
+
+.tp {
+  &--uc {
+    text-transform: uppercase;
+  }
+  &--lc {
+    text-transform: lowercase;
+  }
+  &--util {
+    font-family: $font--util;
+  }
+}
+
+.tp--link {
+  font: 500 $font-size--small $font--base;
+  letter-spacing: 0.01em;
+  color: $color--text-light;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.tp-text {
+  @each $align in (left, right, center) {
+    &--#{$align} {
+      text-align: $align;
+    }
+  }
+}
+
+.l-block {
+  @each $align in (left, right) {
+    &--#{$align} {
+      float: $align;
+    }
+  }
+  &--center {
+    margin: 0 auto;
+  }
+}
+
+b, strong {
+  font-weight: 600;
+}

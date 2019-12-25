@@ -1,0 +1,162 @@
+$btn-color: #ffffff;
+$btn-border-color: transparent;
+$btn-bg: $color--primary;
+
+$btn-color--hover: $btn-color;
+$btn-border-color--hover: $btn-border-color;
+$btn-bg--hover: $btn-bg;
+
+$btn-dark-color: white;
+$btn-dark-border-color: transparent;
+$btn-dark-bg: black;
+
+$btn-dark-color--hover: $btn-dark-color;
+$btn-dark-border-color--hover: $btn-dark-border-color;
+$btn-dark-bg--hover: $btn-dark-bg;
+
+.btn {
+  display: inline-block;
+  font-size: $font-size--main;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem 1.5rem;
+  width: 11.25rem;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  
+  text-decoration: none;
+  cursor: pointer;
+  
+  color: $btn-color;
+  background: $btn-bg;
+  border: 1px solid $btn-border-color;
+  transition: all .2s;
+  
+  @media #{$md-landing} {
+    font-size: 2.175vw;
+    width: 16.35vw;
+  }
+  @media #{$xs} {
+    font-size: 7.5vw;
+    width: 56.25vw;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $btn-color--hover;
+    background: $btn-bg--hover;
+    border-color: $btn-border-color--hover;
+    
+    text-decoration: none;
+    outline: none;
+  }
+
+  &--big {
+    width: 18.75rem;
+    
+    @media #{$md-landing} {
+      width: 27.25vw;
+    }
+    @media #{$xs} {
+      width: 100%;
+    }
+  }
+  
+  &--dark {
+    color: $btn-dark-color;
+    background: $btn-dark-bg;
+    border-color: $btn-dark-border-color;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      color: $btn-dark-color--hover;
+      background: $btn-dark-bg--hover;
+      border-color: $btn-dark-border-color--hover;
+    }
+  }
+  
+  &--primary-dark {
+    color: #000000;
+    font-weight: 600;
+  }
+  
+  &--fullwidth {
+    width: 100%;
+    
+    .field + & {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  &--center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+$btn-close-color: #000000;
+$btn-close-bg: transparent;
+
+$btn-close-color--hover: $btn-close-color;
+$btn-close-bg--hover: $btn-close-bg;
+
+.btn-close {
+  position: relative;
+  @include size(2rem);
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  color: $btn-close-color;
+  background: $btn-close-bg;
+
+  &--big{
+    @include size(2.75rem);
+    min-width: 22px !important;
+    padding: 0;
+    top: 1.5rem !important;
+    right: 1.25rem !important;
+    border: none;
+    margin-bottom: 1vh !important;
+
+    @media #{$xs} {
+      @include size(2rem);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    outline: none;
+    
+    color: $btn-close-color--hover;
+    background: $btn-close-bg--hover;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    @include size(130%, 2px);
+    top: 50%;
+    margin-top: -1px;
+    left: -15%;
+    color: inherit;
+    background: currentColor;
+    transform-origin: center;
+  }
+  
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

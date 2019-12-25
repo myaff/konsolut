@@ -1,0 +1,36 @@
+.main-nav {
+  .nav {
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: -18px -16px 0;
+      @include flexy(space-between, stretch);
+    }
+    &__item {
+      display: block;
+    }
+    &__link {
+      position: relative;
+      display: block;
+      padding: 16px;
+      font: $font-size--base $font--util;
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+      color: $color--light-grey;
+      text-decoration: none;
+
+      &::before {
+        content: '';
+        display: block;
+        @include absolute(bottom 0 left 16px right 16px);
+        height: 3px;
+        background: $color--grey;
+        opacity: 0;
+      }
+
+      &.active::before {
+        opacity: 1;
+      }
+    }
+  }
+}

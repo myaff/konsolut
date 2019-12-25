@@ -1,0 +1,33 @@
+.features {
+  &__list {
+    @include flexy(space-between, flex-start);
+    margin-bottom: 16px;
+
+    @media #{$md} {
+      margin-bottom: 0;
+    }
+    @media #{$sm} {
+      flex-wrap: wrap;
+      margin: 0 -20px -40px;
+    }
+    @media #{$xs} {
+      display: block;
+    }
+  }
+  &__item {
+    flex: 0 0 327px;
+
+    @media #{$md} {
+      flex: 0 0 30%;
+    }
+    @media #{$sm} {
+      flex: 0 1 calc(50% - 30px);
+      margin-bottom: 40px;
+      margin-right: 30px;
+    }
+
+    &-title {
+      margin-bottom: 12px;
+    }
+  }
+}

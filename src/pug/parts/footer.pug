@@ -1,0 +1,19 @@
+include ../mixins
+.footer
+  .l-container
+    .footer__content
+      .footer__logo
+        +icon('logo')
+      .footer__contacts
+        for item, key in info.contacts
+          if key === 'phones'
+            .footer__phones
+              for phone in item
+                +contact(phone, 'footer')
+          else
+            +contact(item, 'footer')
+        .footer__contacts-btn
+          button.btn.btn--outline-medium Заказать звонок
+      .footer__navs
+        for list in navs.footer
+          +navMenu(list).footer-nav.footer__nav

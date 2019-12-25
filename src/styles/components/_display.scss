@@ -1,0 +1,18 @@
+//
+// Display utilities
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-down($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .l-hidden#{$infix}-down         { display: none !important; }
+  }
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .l-hidden#{$infix}-up         { display: none !important; }
+  }
+  @include media-breakpoint-only($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .l-hidden#{$infix}         { display: none !important; }
+  }
+}

@@ -1,0 +1,26 @@
+include ../mixins
+.header
+  .l-container
+    .header__content
+      .header__left
+        .header__burger.l-hidden-lg-up
+          button.btn.btn--square.btn--outline-light
+            +icon('burger')
+        .header__logo
+          +icon('logo')
+        .header__slogan.tp-body--small.l-hidden-sm-down !{info.slogan}
+      .header__right
+        .header__contacts.l-hidden-sm-down
+          .header__phones
+            for item in info.contacts.phones
+              +contact(item, 'header')
+        .header__call-btn
+          button.btn.btn--outline-light.btn--small.l-hidden-md-down Заказать звонок
+          button.btn.btn--square.btn--plain.l-hidden-lg-up
+            +icon('telegram')
+          button.btn.btn--square.btn--plain.l-hidden-md-up
+            +icon('phone')
+        .header__langs.l-hidden-xs
+          +langSwitcher('hlangs', info.langs, 'global-lang').theme--light
+    .header__menu.l-hidden-md-down
+      +navMenu(navs.main).main-nav

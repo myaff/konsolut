@@ -1,0 +1,84 @@
+extends template
+
+prepend page
+	- var layout = 'home';
+	- var currentPage = 'home';
+	- var pageTitle = false;
+	- var pageDesc = false;
+	- var pageImg = false;
+
+block content
+	.page(class="page--" + currentPage)
+		.page-content
+			section.section.section--default.home-head
+				.l-container
+					.section__content
+						+contentBlock().section__block.section__block--left
+							.home-head-left
+								.home-head-left__title.tp-heading--large !{home.head.left.title}
+								.home-head-left__desc.tp-body--big !{home.head.left.desc}
+								.home-head-left__actions
+									for item in home.head.left.links
+										a.btn(href=item.url, class=`btn--${item.style}`) !{item.text}
+						+contentBlock().section__block.section__block--right
+							.home-head-right
+								.home-head-right__title.tp-heading--big !{home.head.right.title}
+								.home-head-right__actions
+									for item in home.head.right.links
+										a.btn(href=item.url, class=`btn--${item.style}`) !{item.text}
+									.home-head-right__note.tp-body--base !{home.head.right.note}
+			section.home-carousel
+				.l-container
+					.swiper-default
+						+carousel(false, false, true)
+							for item in home.slider
+								.swiper-slide(style=`background-image: url("${item.img}");`)
+									.swiper-default__slide-content
+										.home-carousel__title !{item.title}
+										.home-carousel__heading.tp-heading--big !{item.heading}
+			section.home-rent.section.section--default
+				.l-container
+					.section__content
+						+contentBlock(rent.title, rent.more).section__block.section__block--left.rent
+							.rent__list
+								for item in rent.list
+									.rent__item
+										a.rent__item-link(href=item.url)
+											+icon(item.icon).rent__item-icon
+											.rent__item-title !{item.title}
+						+contentBlock(rentMap.title).section__block.section__block--right.rent-map
+							.rent-map__content
+								a.btn.btn--outline-soft.rent-map__btn(href=rentMap.link.url) !{rentMap.link.text}
+								.rent-map__note.tp-body--xsmall !{rentMap.note}
+			section.home-call-back.section.section--large.section--dark
+				.l-container
+					.section__content
+						+contentBlock().section__block.section__block--top.section__block--full.call-back
+							.call-back__content
+								.call-back__info
+									.call-back__title.tp-heading--big !{callBack.title}
+									.call-back__desc.tp-body--small !{callBack.desc}
+								.call-back__form
+									+fieldInput('call-back-01')(type="tel", placeholder=callBack.field.placeholder)
+									button.btn.btn--primary !{callBack.action.text}
+						+contentBlock().section__block.section__block--full.section__block--bottom.features
+							.features__list
+								for item in features.list
+									.features__item
+										.features__item-title.tp-heading--medium !{item.title}
+										.features__item-desc.tp-body--base !{item.desc}
+			section.home-news.section.section--default
+				.l-container
+					.section__content
+						+contentBlock(facts.title).section__block.section__block--left.facts
+							.facts__list
+								for item in facts.list
+									.facts__item
+										.facts__item-title.tp-body--big.tp--util !{item.title}
+						+contentBlock(news.title, news.more).section__block.section__block--right.news
+							.news__list
+								for item in news.list
+									.news__item
+										a.news__item-link(href=item.url)
+											.news__item-img: img(src=item.img, alt="")
+											.news__item-title.tp-body--base !{item.title}

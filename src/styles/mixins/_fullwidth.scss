@@ -1,0 +1,31 @@
+/// Миксин задает элементу ширину во весь экран, выходя за пределы `.container`
+/// 
+/// @access public
+/// @group Utilities
+/// 
+/// @example scss - Использование
+/// .element {
+/// 	@include fullwidth();
+/// }
+/// @example markup - Использование
+/// <div class="container">
+/// 	<div class="element">
+/// 		Контент на всю ширину экрана
+/// 		<div class="container">
+/// 			Может содержать вложенный `.container`, сетку и прочее
+/// 		</div>
+/// 	</div>
+/// </div>
+/// 
+/// @example css - Вывод CSS
+/// .element {
+/// 	width: 100vw;
+/// 	margin-left: calc(-1 * (100vw - 100%) / 2);
+/// 	margin-right: calc(-1 * (100vw - 100%) / 2);
+/// }
+
+@mixin fullwidth(){
+	width: 100vw;
+	margin-left: calc(-1 * (100vw - 100%) / 2);
+	margin-right: calc(-1 * (100vw - 100%) / 2);
+}

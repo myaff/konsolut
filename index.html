@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Konsolut</title>
+    <meta property="og:title" content="Konsolut">
+    <meta property="og:image" content="OG Image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400&amp;display=swap&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="build/css/main.css" rel="stylesheet">
+    <script src="build/img/svg/sprite.js"></script>
+  </head>
+  <body>
+    <div class="svg-sprite"></div>
+    <script>document.querySelector('.svg-sprite').insertAdjacentHTML('afterbegin', SVG_SPRITE);</script>
+    <div class="layout layout--home">
+      <div class="header">
+        <div class="l-container">
+          <div class="header__content">
+            <div class="header__left">
+              <div class="header__burger l-hidden-lg-up">
+                <button class="btn btn--square btn--outline-light">
+                        <svg class="icon">
+                          <use xlink:href="#burger"></use>
+                        </svg>
+                </button>
+              </div>
+              <div class="header__logo">
+                      <svg class="icon">
+                        <use xlink:href="#logo"></use>
+                      </svg>
+              </div>
+              <div class="header__slogan tp-body--small l-hidden-sm-down">Аренда и продажа крановых вибропогружателей в России</div>
+            </div>
+            <div class="header__right">
+              <div class="header__contacts l-hidden-sm-down">
+                <div class="header__phones">
+                        <div class="header-contact">
+                          <div class="header-contact__title">бесплатно <span class="long">по России</span></div><a class="header-contact__link" href="tel:88004544545">8 800 454 45 45</a>
+                        </div>
+                        <div class="header-contact">
+                          <div class="header-contact__title">многоканальный</div><a class="header-contact__link" href="telto:+74958988989">+7 495 898 89 89</a>
+                        </div>
+                </div>
+              </div>
+              <div class="header__call-btn">
+                <button class="btn btn--outline-light btn--small l-hidden-md-down">Заказать звонок</button>
+                <button class="btn btn--square btn--plain l-hidden-lg-up">
+                        <svg class="icon">
+                          <use xlink:href="#telegram"></use>
+                        </svg>
+                </button>
+                <button class="btn btn--square btn--plain l-hidden-md-up">
+                        <svg class="icon">
+                          <use xlink:href="#phone"></use>
+                        </svg>
+                </button>
+              </div>
+              <div class="header__langs l-hidden-xs">
+                      <div class="lang-switcher theme--light">
+                              <div class="field field--switcher">
+                                <label class="field__label" for="hlangs-0">
+                                  <input class="field__input" id="hlangs-0" name="global-lang" value="ru" type="radio" checked>
+                                  <div class="field__box">RU</div>
+                                </label>
+                                <label class="field__label" for="hlangs-1">
+                                  <input class="field__input" id="hlangs-1" name="global-lang" value="en" type="radio">
+                                  <div class="field__box">EN</div>
+                                </label>
+                              </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__menu l-hidden-md-down">
+                  <nav class="nav main-nav">
+                    <ul class="nav__list">
+                      <li class="nav__item"><a class="nav__link active" href="/">Главная</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">Подбор вибропогружателя</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">Аренда</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">Продажа б/у</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">Спецтехника</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">Справочник</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                    </ul>
+                  </nav>
+          </div>
+        </div>
+      </div>
+      <div class="page page--home">
+        <div class="page-content">
+          <section class="section section--default home-head">
+            <div class="l-container">
+              <div class="section__content">
+                      <div class="block section__block section__block--left">
+                        <div class="block__content">
+                          <div class="home-head-left">
+                            <div class="home-head-left__title tp-heading--large">Вибропогружатели <br/>в аренду по всей России</div>
+                            <div class="home-head-left__desc tp-body--big">Основная наша специализация — <br/>аренда крановых вибропогружателей от 2 тонн</div>
+                            <div class="home-head-left__actions"><a class="btn btn--primary" href="#">Подбор вибропогружателя</a><a class="btn btn--outline-light" href="#">Выбрать в Каталоге</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block section__block section__block--right">
+                        <div class="block__content">
+                          <div class="home-head-right">
+                            <div class="home-head-right__title tp-heading--big">В том числе мы <br/> занимаемся продажей <br/>б/у вибропогружателей</div>
+                            <div class="home-head-right__actions"><a class="btn btn--outline-light" href="#">Перейти в каталог</a>
+                              <div class="home-head-right__note tp-body--base">Проверенных временем <br/>и в полной комплектации</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </section>
+          <section class="home-carousel">
+            <div class="l-container">
+              <div class="swiper-default">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" style="background-image: url(&quot;build/img/slider/1.jpg&quot;);">
+                            <div class="swiper-default__slide-content">
+                              <div class="home-carousel__title">Примеры наших работ</div>
+                              <div class="home-carousel__heading tp-heading--big">Вибропрогружение шпунта <br/>в сыпучий грунт за 7 минут!</div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide" style="background-image: url(&quot;build/img/slider/1.jpg&quot;);">
+                            <div class="swiper-default__slide-content">
+                              <div class="home-carousel__title">Примеры наших работ</div>
+                              <div class="home-carousel__heading tp-heading--big">Вибропрогружение шпунта <br/>в сыпучий грунт за 7 минут!</div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide" style="background-image: url(&quot;build/img/slider/1.jpg&quot;);">
+                            <div class="swiper-default__slide-content">
+                              <div class="home-carousel__title">Примеры наших работ</div>
+                              <div class="home-carousel__heading tp-heading--big">Вибропрогружение шпунта <br/>в сыпучий грунт за 7 минут!</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+              </div>
+            </div>
+          </section>
+          <section class="home-rent section section--default">
+            <div class="l-container">
+              <div class="section__content">
+                      <div class="block section__block section__block--left rent">
+                        <div class="block__heading">
+                          <div class="block__title tp-heading--big">Спецтехника в аренду</div>
+                          <div class="block__more l-hidden-xs"><a class="block__more-link tp--link" href="#">Перейти в каталог</a></div>
+                        </div>
+                        <div class="block__content">
+                          <div class="rent__list">
+                            <div class="rent__item"><a class="rent__item-link" href="#">
+                                      <div class="icon icon--placeholder rent__item-icon">icon</div>
+                                <div class="rent__item-title">Автокраны</div></a></div>
+                            <div class="rent__item"><a class="rent__item-link" href="#">
+                                      <div class="icon icon--placeholder rent__item-icon">icon</div>
+                                <div class="rent__item-title">Гусеничные краны</div></a></div>
+                            <div class="rent__item"><a class="rent__item-link" href="#">
+                                      <div class="icon icon--placeholder rent__item-icon">icon</div>
+                                <div class="rent__item-title">Тралы</div></a></div>
+                            <div class="rent__item"><a class="rent__item-link" href="#">
+                                      <div class="icon icon--placeholder rent__item-icon">icon</div>
+                                <div class="rent__item-title">Длинномеры</div></a></div>
+                            <div class="rent__item"><a class="rent__item-link" href="#">
+                                      <div class="icon icon--placeholder rent__item-icon">icon</div>
+                                <div class="rent__item-title">Модульные здания</div></a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block section__block section__block--right rent-map">
+                        <div class="block__heading">
+                          <div class="block__title tp-heading--big">Аренда сваебойного оборудования в любую страну</div>
+                        </div>
+                        <div class="block__content">
+                          <div class="rent-map__content"><a class="btn btn--outline-soft rent-map__btn" href="#">Подробнее</a>
+                            <div class="rent-map__note tp-body--xsmall">Доставка вибропогружателя в Германию, Голландию, Бельгию, Австрию, Францию, Италию и т.д.</div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </section>
+          <section class="home-call-back section section--large section--dark">
+            <div class="l-container">
+              <div class="section__content">
+                      <div class="block section__block section__block--top section__block--full call-back">
+                        <div class="block__content">
+                          <div class="call-back__content">
+                            <div class="call-back__info">
+                              <div class="call-back__title tp-heading--big">Мы перезвоним <br/>и ответим на все вопросы</div>
+                              <div class="call-back__desc tp-body--small">Бесплатно проконсультируем по всем вопросам вибропогружения, доставке, регламентам работ</div>
+                            </div>
+                            <div class="call-back__form">
+                                    <div class="field form__field">
+                                      <input class="field__input" id="call-back-01" type="tel" placeholder="Ваш телефон">
+                                    </div>
+                              <button class="btn btn--primary">Проконсультироваться</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block section__block section__block--full section__block--bottom features">
+                        <div class="block__content">
+                          <div class="features__list">
+                            <div class="features__item">
+                              <div class="features__item-title tp-heading--medium">Работаем <br/>круглосуточно</div>
+                              <div class="features__item-desc tp-body--base">Вы быстро справитесь со своей задачей, так как наша техника будет на вашем объекте в указанное время</div>
+                            </div>
+                            <div class="features__item">
+                              <div class="features__item-title tp-heading--medium">Заключаем официальный <br/>договор на все услуги</div>
+                              <div class="features__item-desc tp-body--base">Вы быстро справитесь со своей задачей, так как наша техника будет на вашем объекте в указанное время</div>
+                            </div>
+                            <div class="features__item">
+                              <div class="features__item-title tp-heading--medium">Включаем в стоимость <br/>услуги доставки и наладки</div>
+                              <div class="features__item-desc tp-body--base">Вам не нужно доплачивать. Доставку и подготовку к работе обеспечим мы</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </section>
+          <section class="home-news section section--default">
+            <div class="l-container">
+              <div class="section__content">
+                      <div class="block section__block section__block--left facts">
+                        <div class="block__heading">
+                          <div class="block__title tp-heading--big">Факты о нас</div>
+                        </div>
+                        <div class="block__content">
+                          <div class="facts__list">
+                            <div class="facts__item">
+                              <div class="facts__item-title tp-body--big tp--util">67 контактов на аренду, <br/>80 реализованных проектов</div>
+                            </div>
+                            <div class="facts__item">
+                              <div class="facts__item-title tp-body--big tp--util">Контракты <br/>с гос. компаниями</div>
+                            </div>
+                            <div class="facts__item">
+                              <div class="facts__item-title tp-body--big tp--util">Более 50 покупателей <br/>на новое оборудование</div>
+                            </div>
+                            <div class="facts__item">
+                              <div class="facts__item-title tp-body--big tp--util">Более 10 лет <br/>успешной работы</div>
+                            </div>
+                            <div class="facts__item">
+                              <div class="facts__item-title tp-body--big tp--util">Возможность обмена <br/>оборудования</div>
+                            </div>
+                            <div class="facts__item">
+                              <div class="facts__item-title tp-body--big tp--util">Круглосуточная <br/>поддержка</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block section__block section__block--right news">
+                        <div class="block__heading">
+                          <div class="block__title tp-heading--big">Новости</div>
+                          <div class="block__more l-hidden-xs"><a class="block__more-link tp--link" href="#">Все новости</a></div>
+                        </div>
+                        <div class="block__content">
+                          <div class="news__list">
+                            <div class="news__item"><a class="news__item-link" href="#">
+                                <div class="news__item-img"><img src="build/img/news/1.jpg" alt=""></div>
+                                <div class="news__item-title tp-body--base">Вибропогружатель с боковым захватом: преимущества и сферы применения</div></a></div>
+                            <div class="news__item"><a class="news__item-link" href="#">
+                                <div class="news__item-img"><img src="build/img/news/2.jpg" alt=""></div>
+                                <div class="news__item-title tp-body--base">Широкие, а главное выгодные условия для клиентов в Европе</div></a></div>
+                            <div class="news__item"><a class="news__item-link" href="#">
+                                <div class="news__item-img"><img src="build/img/news/3.jpg" alt=""></div>
+                                <div class="news__item-title tp-body--base">Вибропогружатель с боковым захватом Delta на строительстве магистрального газопровода</div></a></div>
+                            <div class="news__item"><a class="news__item-link" href="#">
+                                <div class="news__item-img"><img src="build/img/news/4.jpg" alt=""></div>
+                                <div class="news__item-title tp-body--base">Как мы везли вибропогружатель из России в Конго</div></a></div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="l-container">
+          <div class="footer__content">
+            <div class="footer__logo">
+                    <svg class="icon">
+                      <use xlink:href="#logo"></use>
+                    </svg>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__phones">
+                      <div class="footer-contact">
+                        <div class="footer-contact__title">бесплатно <span class="long">по России</span></div><a class="footer-contact__link" href="tel:88004544545">8 800 454 45 45</a>
+                      </div>
+                      <div class="footer-contact">
+                        <div class="footer-contact__title">многоканальный</div><a class="footer-contact__link" href="telto:+74958988989">+7 495 898 89 89</a>
+                      </div>
+              </div>
+                    <div class="footer-contact">
+                      <div class="footer-contact__title">email</div><a class="footer-contact__link" href="mailto:info@consolut.ru">info@consolut.ru</a>
+                    </div>
+                    <div class="footer-contact">
+                      <div class="footer-contact__title">офис</div><span class="footer-contact__text">Москва, ул. Дворникова 7</span>
+                    </div>
+              <div class="footer__contacts-btn">
+                <button class="btn btn--outline-medium">Заказать звонок</button>
+              </div>
+            </div>
+            <div class="footer__navs">
+                    <nav class="nav footer-nav footer__nav">
+                      <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Наши объекты</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Справочник</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Реквизиты</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Вакансии</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                      </ul>
+                    </nav>
+                    <nav class="nav footer-nav footer__nav">
+                      <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="#">Подбор вибропогружателя</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Аренда вибропогружателя</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Продажа б/у погружателей</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Спецтехника в аренду</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Аренда зарубежом</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Доставка и обслуживание</a></li>
+                      </ul>
+                    </nav>
+                    <nav class="nav footer-nav footer__nav">
+                      <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="#">Крановые вибропогружатели</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Экскаваторные вибропогружатели</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Дополнительное оборудование</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Гусеничные краны</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Тралы</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Длинномеры</a></li>
+                      </ul>
+                    </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="build/js/main.js"></script>
+  </body>
+</html>

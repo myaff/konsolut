@@ -1,0 +1,56 @@
+.rent-map {
+  &::before {
+    content: '';
+    display: block;
+    @include absolute(top 0 left 0);
+    @include size(100%);
+    opacity: 0.15;
+    background: url("../img/map.jpg") center no-repeat;
+    background-size: contain;
+
+    @media #{$md} {
+      background-position: right center;
+      background-size: auto 392px;
+    }
+    @media #{$xs} {
+      background-position: left center;
+      right: -20px;
+      width: auto;
+    }
+  }
+
+  &__content {
+    @include flexy(flex-start, center);
+    margin-top: 146px;
+
+    @media #{$md} {
+      margin-bottom: 40px;
+    }
+    @media #{$sm} {
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+    @media #{$xs} {
+      display: block;
+    }
+  }
+
+  &__btn {
+    flex: 0 0 200px;
+    margin-right: 20px;
+
+    @media #{$xs} {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__note {
+    color: $color--soft;
+    max-width: 18em;
+  }
+
+  .block__title {
+    max-width: 13em;
+  }
+}

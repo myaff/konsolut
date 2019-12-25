@@ -1,0 +1,74 @@
+@import '../../../node_modules/swiper/css/swiper.min.css';
+
+.swiper-default {
+  background: $color--base;
+  .swiper {
+    &-slide {
+      display: flex;
+      height: 560px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media #{$md} {
+        height: 400px;
+      }
+      @media #{$sm} {
+        height: 342px;
+      }
+    }
+    &-pagination {
+      left: 60px;
+      bottom: 60px;
+      width: auto;
+
+      @media #{$md} {
+        left: 44px;
+      }
+      @media #{$sm} {
+        left: 20px;
+        bottom: 30px;
+      }
+      &-bullet {
+        @include size(20px);
+        border-radius: 0;
+        background: $color--text-white;
+        box-shadow: none;
+        margin-right: 10px;
+        opacity: 1;
+        transition: width 0.3s, background 0.3s;
+
+        &:hover {
+          background: $color--primary;
+        }
+
+        @media #{$sm} {
+          @include size(16px);
+        }
+
+        &-active {
+          background: $color--primary;
+          width: 50px;
+
+          @media #{$sm} {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  &__slide-content {
+    @include size(100%);
+    padding: 87px 60px;
+    color: $color--text-white;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.19) 100%);
+
+    @media #{$md} {
+      padding: 66px 40px;
+    }
+    @media #{$sm} {
+      padding: 50px 20px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.rent {
+  &__list {
+    column-count: 2;
+    column-gap: 30px;
+    max-width: 642px;
+    padding-bottom: 25px;
+
+    @media #{$md} {
+      column-count: 3;
+      column-gap: 10px;
+      max-width: 100%;
+      padding-bottom: 0;
+    }
+    @media #{$sm} {
+      column-count: 2;
+    }
+    @media #{$xs} {
+      column-count: 1;
+      column-gap: 0;
+    }
+  }
+  &__item {
+    margin-bottom: 32px;
+    break-inside: avoid;
+
+    @media #{$sm} {
+      margin-bottom: 24px;
+    }
+    
+    &-link {
+      @include flexy(flex-start, center);
+      color: $color--text;
+      text-decoration: none;
+    }
+    &-icon {
+      flex: 0 0 92px;
+      @include size(92px, 60px);
+      margin-right: 20px;
+      color: $color--text-light;
+    }
+    &-title {
+      font: 500 18px $font--base;
+    }
+  }
+}

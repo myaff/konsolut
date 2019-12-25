@@ -1,0 +1,117 @@
+.section {
+  &--default &__block {
+    padding: 60px 40px;
+
+    @media #{$md} {
+      padding: 50px 40px 40px;
+    }
+    @media #{$sm} {
+      padding: 50px 0 30px;
+    }
+  }
+  &--large &__block {
+    padding: 90px 60px;
+
+    @media #{$md} {
+      padding: 90px 40px;
+    }
+    @media #{$sm} {
+      padding: 50px 20px 60px;
+    }
+  }
+  &--large &__block--top {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media #{$md} {
+      padding-bottom: 27px;
+    }
+    @media #{$sm} {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+  }
+  &--large &__block--bottom {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    @media #{$sm} {
+      padding-top: 50px;
+    }
+  }
+
+  &--dark {
+    @media #{$sm} {
+      background: $color--base;
+    }
+  }
+
+  &--dark &__content {
+    background: $color--base;
+    color: $color--white;
+
+    .block {
+      border-color: $color--border-light;
+    }
+  }
+
+  &__block {
+    &--left {
+      width: 59.3%;
+
+      @media #{$md} {
+        width: 100%;
+      }
+    }
+    &--right {
+      @include absolute(top 0 left 59.3%);
+      @include size(40.7%, 100%);
+      border-left: 1px solid $color--border-dark;
+
+      @media #{$md} {
+        position: relative;
+        left: 0;
+        width: 100%;
+        border: 0;
+      }
+    }
+    &--top {
+      border-bottom: 1px solid $color--border-dark;
+    }
+    &--bottom {
+      border-top: 1px solid $color--border-dark;
+    }
+    &--top + &--bottom {
+      border-top-width: 0;
+    }
+    &--full {
+      &::before {
+        content: '';
+        display: block;
+        @include absolute(top 0 left 59.3%);
+        @include size(0px, 100%);
+        border-left: 1px solid;
+        border-color: inherit;
+
+        @media #{$md} {
+          left: 48%;
+        }
+      }
+    }
+  }
+}
+
+.block {
+  &__heading {
+    @include flexy(space-between, baseline);
+    margin-bottom: 25px;
+    z-index: 1;
+
+    @media #{$md} {
+      margin-bottom: 23px;
+    }
+  }
+  &__content {
+    z-index: 1;
+  }
+}

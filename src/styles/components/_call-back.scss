@@ -1,0 +1,57 @@
+.call-back {
+  @media #{$sm} {
+    margin: 0 -20px;
+  }
+  &__content {
+    @include flexy(space-between, center);
+    margin-bottom: -4px;
+
+    @media #{$md} {
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
+
+    @media #{$sm} {
+      display: block;
+    }
+  }
+  &__title {
+    margin: 7px 0;
+
+    @media #{$sm} {
+      margin: 0 0 30px;
+    }
+  }
+  &__desc {
+    @media #{$md} {
+      font-size: 14px;
+      max-width: 18em;
+    }
+  }
+
+  &__form {
+    flex: 0 0 777px;
+    @include flexy(flex-start, stretch);
+
+    @media #{$md} {
+      flex-basis: 64.8%;
+      margin-top: 40px;
+    }
+    @media #{$xs} {
+      display: block;
+      margin-top: 30px;
+    }
+
+    .field {
+      flex: 1 1 58%;
+    }
+    .btn {
+      flex: 1 1 42%;
+
+      @media #{$xs} {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+}

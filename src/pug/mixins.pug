@@ -1,0 +1,128 @@
+mixin icon(iconName)
+	if iconName
+		svg&attributes(attributes).icon: use(xlink:href="#" + iconName)
+	else
+		div&attributes(attributes).icon.icon--placeholder icon
+
+//- social
+mixin social(isInline, hasTitle)
+	.social&attributes(attributes)(class=isInline ? "social--inline" : '')
+		if hasTitle
+			.social__title Поделиться проектом
+		#share(data-services=settings.socials)
+
+//- components
+
+mixin contact(item, prefix)
+	div&attributes(attributes)(class=`${prefix}-contact`)
+		div(class=`${prefix}-contact__title`) !{item.title}
+		if item.href
+			a(class=`${prefix}-contact__link`, href=item.href) !{item.text}
+		else
+			span(class=`${prefix}-contact__text`) !{item.text}
+
+mixin navMenu(menuList)
+	nav&attributes(attributes).nav
+		ul.nav__list
+			for item in menuList
+				li.nav__item
+					a.nav__link(href=item.url, class=item.active ? 'active' : '') !{item.title}
+
+mixin contentBlock(bTitle, bMore = false)
+	div&attributes(attributes).block
+		if bTitle || bMore
+			.block__heading
+				if bTitle
+					.block__title.tp-heading--big !{bTitle}
+				if bMore
+					.block__more.l-hidden-xs
+						a.block__more-link.tp--link(href=bMore.url) !{bMore.text}
+		.block__content
+			block
+
+mixin video(modalID, videoURL, poster)
+	.video__wrapper
+		div&attributes(attributes).video
+			.video__poster: img(src=poster, alt="")
+			.video__play.btn-modal(data-target="#" + modalID)
+				+icon('play')
+		+modal(modalID).modal--video
+			.yt
+				iframe(id=modalID + "-iframe", src=videoURL + "?rel=0&enablejsapi=1&html5=1", allow="autoplay; encrypted-media", allowfullscreen)
+
+mixin carousel(items, navigation, pagination)
+	div&attributes(attributes).swiper-container
+		.swiper-wrapper
+			if items
+				for item, index in items
+					.swiper-slide
+						.swiper-slide__title !{item.title}
+						.swiper-slide__img: img(src=item.img, alt=item.title)
+			else
+				block
+		if navigation
+			.swiper-button-prev
+			.swiper-button-next
+		if pagination
+			.swiper-pagination
+
+mixin modal(modalID)
+	div&attributes(attributes).modal(id=modalID)
+		.modal__window
+			.modal__close.btn-close-modal
+				+icon("cross").icon--block
+			.modal__inner
+				.modal__content
+					block
+
+//- forms
+mixin fieldInput(inpID, inpLabel)
+	.field.form__field
+		if inpLabel
+			label.field__label(for=inpID) !{inpLabel}
+		input&attributes(attributes).field__input(id=inpID)
+		block
+
+mixin fieldTextarea(inpID, inpPlaceholder, inpLabel)
+	.field.form__field
+		if inpLabel
+			.field__label-text !{inpLabel}
+		label.field__label.flow-textarea-label(for=inpID)
+			textarea&attributes(attributes).field__input.flow-textarea(id=inpID)
+			.flow-textarea-example
+			if inpPlaceholder
+				.field__placeholder !{inpPlaceholder}
+		block
+
+mixin fieldSearch(inpID, inpPlaceholder)
+	.field.form__field.field--search
+		label.field__label(for=inpID)
+			input&attributes(attributes).field__input(id=inpID)
+			.field__placeholder !{inpPlaceholder}
+		button.btn-search.field__btn.btn.btn--plain
+			+icon('loupe')
+
+mixin fieldCheckbox(inpID, inpText, fieldClass = false)
+	.field.form__field.field--checkbox(class=fieldClass ? fieldClass : "")
+		label.field__label(for=inpID)
+			.field__box
+				input&attributes(attributes).field__input(id=inpID, type="checkbox")
+			.field__text !{inpText}
+
+mixin fieldRadio(inpID, inpText, fieldClass = false)
+	.field.form__field.field--radio(class=fieldClass ? fieldClass : "")
+		label.field__label(for=inpID)
+			.field__box
+				input&attributes(attributes).field__input(id=inpID, type="radio")
+			.field__text !{inpText}
+
+mixin fieldSwitcher(inpID, items, inpName)
+	div&attributes(attributes).field.field--switcher
+		for item, index in items
+			label.field__label(for=`${inpID}-${index}`)
+				input.field__input(id=`${inpID}-${index}`, name=inpName, value=item.value, type="radio" checked=item.selected)
+				.field__box !{item.label}
+
+mixin langSwitcher(inpID, langs, inpName)
+	div&attributes(attributes).lang-switcher
+		+fieldSwitcher(inpID, langs, inpName)

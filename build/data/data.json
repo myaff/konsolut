@@ -1,0 +1,379 @@
+{
+	"settings": {
+		"scripts": {
+			"head": [
+				"build/img/svg/sprite.js"
+			],
+			"temp": [
+				"build/js/vendor/jquery-3.2.1.min.js",
+				"build/js/vendor/jquery.ba-throttle-debounce.js",
+				"https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js",
+				"https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCv0MAFow31tpX0tcPa5OatGH2sZxARZdM",
+				"build/js/vendor/jquery.mousewheel.min.js",
+				"https://api-maps.yandex.ru/2.1/?apikey=41b512d5-2a9e-49e4-b030-fe9705e7e841&lang=ru_RU",
+				"build/js/vendor/jquery.touchSwipe.min.js",
+				"https://yastatic.net/share2/share.js",
+				"build/js/vendor/jquery.fullpage.min.js",
+				"build/js/vendor/TweenMax.min.js",
+				"build/js/vendor/inputmask.min.js",
+				"build/js/vendor/inputmask.extensions.js",
+				"build/js/vendor/jquery.inputmask.min.js",
+				"build/js/vendor/jquery.mCustomScrollbar.concat.min.js",
+				"build/js/vendor/select2.full.min.js",
+				"build/js/vendor/ion.rangeslider.min.js",
+				"build/js/vendor/swiper.min.js"
+			],
+			"foot": [
+			]
+		},
+		"styles": {
+			"head": [
+				"https://fonts.googleapis.com/css?family=Roboto:400&display=swap&subset=latin,cyrillic"
+			],
+			"temp": [
+			]
+		},
+		"socials": [
+			{
+				"title": "Вконтакте",
+				"icon": "vk",
+				"url": "#"
+			},
+			{
+				"title": "Facebook",
+				"icon": "fb",
+				"url": "#"
+			},
+			{
+				"title": "Instagram",
+				"icon": "inst",
+				"url": "#"
+			}
+		],
+		"share": "facebook,vkontakte,odnoklassniki",
+		"ogDefaults": {
+			"title": "Konsolut",
+			"description": "OG Description",
+			"image": "OG Image"
+		}
+	},
+	"info": {
+		"name": "Konsolute",
+		"slogan": "Аренда и продажа крановых вибропогружателей в России",
+		"contacts": {
+			"phones": [
+				{
+					"text": "8 800 454 45 45",
+					"href": "tel:88004544545",
+					"title": "бесплатно <span class=\"long\">по России</span>"
+				},
+				{
+					"text": "+7 495 898 89 89",
+					"href": "telto:+74958988989",
+					"title": "многоканальный"
+				}
+			],
+			"email": {
+				"title": "email",
+				"text": "info@consolut.ru",
+				"href": "mailto:info@consolut.ru"
+			},
+			"address": {
+				"title": "офис",
+				"text": "Москва, ул. Дворникова 7"
+			}
+		},
+		"langs": [
+			{
+				"label": "RU",
+				"value": "ru",
+				"selected": true
+			},
+			{
+				"label": "EN",
+				"value": "en",
+				"selected": false
+			}
+		]
+	},
+	"navs": {
+		"footer": [
+			[
+				{
+					"title": "О компании",
+					"url": "#"
+				},
+				{
+					"title": "Наши объекты",
+					"url": "#"
+				},
+				{
+					"title": "Справочник",
+					"url": "#"
+				},
+				{
+					"title": "Реквизиты",
+					"url": "#"
+				},
+				{
+					"title": "Вакансии",
+					"url": "#"
+				},
+				{
+					"title": "Контакты",
+					"url": "#"
+				}
+			],
+			[
+				{
+					"title": "Подбор вибропогружателя",
+					"url": "#"
+				},
+				{
+					"title": "Аренда вибропогружателя",
+					"url": "#"
+				},
+				{
+					"title": "Продажа б/у погружателей",
+					"url": "#"
+				},
+				{
+					"title": "Спецтехника в аренду",
+					"url": "#"
+				},
+				{
+					"title": "Аренда зарубежом",
+					"url": "#"
+				},
+				{
+					"title": "Доставка и обслуживание",
+					"url": "#"
+				}
+			],
+			[
+				{
+					"title": "Крановые вибропогружатели",
+					"url": "#"
+				},
+				{
+					"title": "Экскаваторные вибропогружатели",
+					"url": "#"
+				},
+				{
+					"title": "Дополнительное оборудование",
+					"url": "#"
+				},
+				{
+					"title": "Гусеничные краны",
+					"url": "#"
+				},
+				{
+					"title": "Тралы",
+					"url": "#"
+				},
+				{
+					"title": "Длинномеры",
+					"url": "#"
+				}
+			]
+		],
+		"main": [
+			{
+				"title": "Главная",
+				"url": "/",
+				"active": true
+			},
+			{
+				"title": "О компании",
+				"url": "#"
+			},
+			{
+				"title": "Подбор вибропогружателя",
+				"url": "#"
+			},
+			{
+				"title": "Аренда",
+				"url": "#"
+			},
+			{
+				"title": "Продажа б/у",
+				"url": "#"
+			},
+			{
+				"title": "Спецтехника",
+				"url": "#"
+			},
+			{
+				"title": "Справочник",
+				"url": "#"
+			},
+			{
+				"title": "Контакты",
+				"url": "#"
+			}
+		]
+	},
+	"facts": {
+		"title": "Факты о нас",
+		"list": [
+			{
+				"title": "67 контактов на аренду, <br/>80 реализованных проектов"
+			},
+			{
+				"title": "Контракты <br/>с гос. компаниями"
+			},
+			{
+				"title": "Более 50 покупателей <br/>на новое оборудование"
+			},
+			{
+				"title": "Более 10 лет <br/>успешной работы"
+			},
+			{
+				"title": "Возможность обмена <br/>оборудования"
+			},
+			{
+				"title": "Круглосуточная <br/>поддержка"
+			}
+		]
+	},
+	"news": {
+		"title": "Новости",
+		"more": {
+			"url": "#",
+			"text": "Все новости"
+		},
+		"list": [
+			{
+				"title": "Вибропогружатель с боковым захватом: преимущества и сферы применения",
+				"img": "build/img/news/1.jpg",
+				"url": "#"
+			},
+			{
+				"title": "Широкие, а главное выгодные условия для клиентов в Европе",
+				"img": "build/img/news/2.jpg",
+				"url": "#"
+			},
+			{
+				"title": "Вибропогружатель с боковым захватом Delta на строительстве магистрального газопровода",
+				"img": "build/img/news/3.jpg",
+				"url": "#"
+			},
+			{
+				"title": "Как мы везли вибропогружатель из России в Конго",
+				"img": "build/img/news/4.jpg",
+				"url": "#"
+			}
+		]
+	},
+	"rent": {
+		"title": "Спецтехника в аренду",
+		"more": {
+			"text": "Перейти в каталог",
+			"url": "#"
+		},
+		"list": [
+			{
+				"title": "Автокраны",
+				"url": "#"
+			},
+			{
+				"title": "Гусеничные краны",
+				"url": "#"
+			},
+			{
+				"title": "Тралы",
+				"url": "#"
+			},
+			{
+				"title": "Длинномеры",
+				"url": "#"
+			},
+			{
+				"title": "Модульные здания",
+				"url": "#"
+			}
+		]
+	},
+	"rentMap": {
+		"title": "Аренда сваебойного оборудования в любую страну",
+		"link": {
+			"url": "#",
+			"text": "Подробнее"
+		},
+		"note": "Доставка вибропогружателя в Германию, Голландию, Бельгию, Австрию, Францию, Италию и т.д."
+	},
+	"features": {
+		"list": [
+			{
+				"title": "Работаем <br/>круглосуточно",
+				"desc": "Вы быстро справитесь со своей задачей, так как наша техника будет на вашем объекте в указанное время"
+			},
+			{
+				"title": "Заключаем официальный <br/>договор на все услуги",
+				"desc": "Вы быстро справитесь со своей задачей, так как наша техника будет на вашем объекте в указанное время"
+			},
+			{
+				"title": "Включаем в стоимость <br/>услуги доставки и наладки",
+				"desc": "Вам не нужно доплачивать. Доставку и подготовку к работе обеспечим мы"
+			}
+		]
+	},
+	"callBack": {
+		"title": "Мы перезвоним <br/>и ответим на все вопросы",
+		"desc": "Бесплатно проконсультируем по всем вопросам вибропогружения, доставке, регламентам работ",
+		"field": {
+			"placeholder": "Ваш телефон"
+		},
+		"action": {
+			"text": "Проконсультироваться"
+		}
+	},
+	"home": {
+		"head": {
+			"left": {
+				"title": "Вибропогружатели <br/>в аренду по всей России",
+				"desc": "Основная наша специализация — <br/>аренда крановых вибропогружателей от 2 тонн",
+				"links": [
+					{
+						"text": "Подбор вибропогружателя",
+						"url": "#",
+						"style": "primary"
+					},
+					{
+						"text": "Выбрать в Каталоге",
+						"url": "#",
+						"style": "outline-light"
+					}
+				]
+			},
+			"right": {
+				"title": "В том числе мы <br/> занимаемся продажей <br/>б/у вибропогружателей",
+				"links": [
+					{
+						"text": "Перейти в каталог",
+						"url": "#",
+						"style": "outline-light"
+					}
+				],
+				"note": "Проверенных временем <br/>и в полной комплектации"
+			}
+		},
+		"slider": [
+			{
+				"title": "Примеры наших работ",
+				"heading": "Вибропрогружение шпунта <br/>в сыпучий грунт за 7 минут!",
+				"img": "build/img/slider/1.jpg"
+			},
+			{
+				"title": "Примеры наших работ",
+				"heading": "Вибропрогружение шпунта <br/>в сыпучий грунт за 7 минут!",
+				"img": "build/img/slider/1.jpg"
+			},
+			{
+				"title": "Примеры наших работ",
+				"heading": "Вибропрогружение шпунта <br/>в сыпучий грунт за 7 минут!",
+				"img": "build/img/slider/1.jpg"
+			}
+		]
+	}
+}

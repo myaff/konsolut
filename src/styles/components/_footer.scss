@@ -1,0 +1,136 @@
+.footer {
+  background: $color--base;
+  color: $color--medium-grey;
+  z-index: 2;
+  width: 100%;
+  
+  &__content {
+    @include flexy(flex-start, flex-start, wrap, column);
+    padding: 60px 40px 80px;
+
+    @media #{$sm} {
+      padding: 50px 0;
+    }
+  }
+
+  &__logo {
+    @include size(190px, 30px);
+    margin-bottom: 35px;
+
+    @media #{$xs} {
+      margin-bottom: 0;
+    }
+
+    .icon {
+      display: block;
+      @include size(100%);
+    }
+  }
+
+  &__navs {
+    width: 59.3%;
+    @include flexy(flex-start, flex-start);
+
+    @media #{$md} {
+      width: 68.2%;
+    }
+    @media #{$sm} {
+      display: block;
+      width: 50%;
+    }
+    @media #{$xs} {
+      width: 100%;
+    }
+  }
+  &__nav {
+    margin-right: 80px;
+
+    @media #{$md} {
+      margin-right: 30px;
+    }
+    @media #{$sm} {
+      margin-right: 0;
+      margin-bottom: 36px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @media #{$sm} {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__contacts {
+    @include absolute(top 0 left 59.3%);
+    @include size(40.7%, 100%);
+    padding-top: 56px;
+    padding-left: 40px;
+    border-left: 1px solid $color--grey;
+
+    @media #{$md} {
+      left: 68.2%;
+      width: 31.8%;
+    }
+    @media #{$sm} {
+      left: 50%;
+      width: 50%;
+      padding: 50px 0;
+      padding-left: 20px;
+    }
+    @media #{$xs} {
+      @include relative(left 0);
+      padding: 50px 0;
+      border: 0;
+      width: 100%;
+    }
+
+    &-btn {
+      margin-top: 40px;
+
+      @media #{$md} {
+        margin-top: 24px;
+      }
+    }
+  }
+  &__phones {
+    @include flexy(flex-start, flex-start);
+
+    @media #{$md} {
+      display: block;
+    }
+
+    .footer-contact + .footer-contact {
+      margin-left: 90px;
+
+      @media #{$md} {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+.footer-contact {
+  margin-bottom: 29px;
+
+  @media #{$md} {
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font: $font-size--xsmall - 1 $font--util;
+    line-height: 1.167;
+    margin-bottom: 3px;
+  }
+  &__text,
+  &__link {
+    font: bold 18px $font--accent;
+    line-height: 1.28;
+  }
+  &__link {
+    text-decoration: none;
+    color: $color--medium-grey;
+  }
+}

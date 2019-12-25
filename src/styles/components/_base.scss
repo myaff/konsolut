@@ -1,0 +1,62 @@
+html, body, div, header, footer, section, article {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html, body {
+  font: #{$font-size--base} / #{$line-height--base} $font--base;
+  color: $color--base;
+  background: $body-bg;
+  @media #{$sm} {
+    background: $body-bg--mobile;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.layout {
+  width: 100%;
+  min-width: 20rem;
+  min-height: 100vh;
+  @include flexy(flex-start, stretch, nowrap, column);
+
+  .header,
+  .footer {
+    flex: 0 0 auto;
+  }
+
+  .page {
+    flex: 1 1 auto;
+  }
+}
+
+.page {
+}
+
+.l-container {
+  @include center-block;
+  width: 100%;
+  max-width: 87.5rem;
+  padding: 0 2.5rem;
+  
+  @media #{$sm} {
+    padding: 1px 1.25rem;
+  }
+}
+
+
+.hidden {
+  display: none!important;
+}
+.invisible {
+  visibility: hidden;
+}

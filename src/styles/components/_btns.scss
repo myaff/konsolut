@@ -1,0 +1,61 @@
+.btn {
+  display: inline-block;
+  font: bold 13px $font--base;
+  line-height: 1.23;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 21px 38px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &--small {
+    padding: 8px 16px;
+    line-height: 14px;
+  }
+  &--square {
+    @include size(32px);
+    padding: 0;
+    line-height: 1;
+    vertical-align: middle;
+
+    .icon {
+      display: block;
+      @include size(100%);
+    }
+
+    &[class*=outline] {
+      padding: 6px;
+    }
+  }
+
+  &--primary {
+    color: $color--white;
+    background: $color--primary;
+  }
+  &--outline-light {
+    color: $color--text-white;
+    border-color: currentColor;
+    background: transparent;
+  }
+  &--outline-medium {
+    color: $color--medium-grey;
+    border-color: currentColor;
+    background: transparent;
+  }
+  &--outline-soft {
+    color: $color--soft;
+    border-color: currentColor;
+    background: transparent;
+  }
+
+  &--plain {
+    border: 0;
+    background: transparent;
+    color: $color--text-white;
+  }
+}

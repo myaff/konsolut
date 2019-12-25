@@ -1,0 +1,48 @@
+.news {
+  &__list {
+
+    @media #{$md} {
+      @include flexy(flex-start, flex-start, wrap);
+      margin: 0 -15px 7px;
+    }
+    @media #{$sm} {
+      margin-bottom: 30px;
+    }
+    @media #{$xs} {
+      display: block;
+      margin: 0;
+    }
+  }
+  &__item {
+    margin-bottom: 30px;
+
+    @media #{$md} {
+      flex: 0 0 calc(50% - 30px);
+      margin: 0 15px 34px;
+    }
+    @media #{$xs} {
+      margin: 0 0 32px;
+    }
+
+    &-link {
+      @include flexy(flex-start, flex-start);
+      color: $color--text;
+      text-decoration: none;
+    }
+
+    &-img {
+      flex: 0 0 92px;
+      @include size(92px, 60px);
+      overflow: hidden;
+      margin-right: 20px;
+
+      img {
+        max-width: 100%;
+        @include absolute-center();
+      }
+    }
+    &-title {
+      margin-top: 5px;
+    }
+  }
+}
